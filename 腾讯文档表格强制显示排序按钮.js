@@ -18,21 +18,21 @@
 // @version             0.1.0
 // ==/UserScript==
 
-(function () {
-  "use strict";
+;(function () {
+  'use strict'
 
-  let timer = null;
+  let timer = null
   function checkLink() {
-    var parent = document.querySelector(".shows-view");
-    var sort = document.getElementById("sheet-sort-button");
+    var parent = document.querySelector('.shows-view')
+    var sort = document.getElementById('sheet-sort-button')
     if (parent && sort) {
       // parent.appendChild(sort);
-      parent.insertBefore(sort, parent.childNodes[0]);
-      sort.style.setProperty("display", "inline-block", "important");
+      parent.insertBefore(sort, parent.childNodes[0])
+      sort.style.setProperty('display', 'inline-block', 'important')
 
-      clearInterval(timer);
+      clearInterval(timer)
     }
   }
 
-  timer = setInterval(checkLink, 100);
-})();
+  timer = setInterval(checkLink, 100)
+})()
